@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ananda Sai Sweet Home & Bakery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* BACKGROUND */
+body{
+/* CORRECTED: Removed the folder path */
+background-image:url("ananda-sai-background.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+min-height:100vh;
+}
+
+.overlay{
+min-height:100vh;
+background:rgba(69,69,69,0.2);
+padding:10px;
+}
+
+.container{
+width:95%;
+max-width:420px;
+margin:auto;
+text-align:center;
+padding:15px;
+}
+
+/* LOGO */
+.logo{
+width:100%;
+max-width:160px;
+display:block;
+margin:10px auto;
+}
+
+/* BUTTONS */
+.call-btn{
+display:inline-block;
+background:#111;
+color:#ffd54f;
+padding:10px 22px;
+border-radius:30px;
+font-size:15px;
+font-weight:700;
+text-decoration:none;
+margin-top:10px;
+border:none;
+cursor:pointer;
+}
+
+.numbers-box{
+margin-top:20px;
+background:#f7f1df;
+border:3px dashed #8b5a2b;
+border-radius:20px;
+padding:15px;
+display:flex;
+justify-content:space-between;
+gap:8px;
+}
+
+.numbers-box div{ flex:1; }
+
+.numbers-box h3{
+font-size:12px;
+color:#6b4201;
+margin-bottom:5px;
+}
+
+.numbers-box a{
+font-size:11px;
+text-decoration:none;
+color:#000;
+font-weight:600;
+}
+
+.visit-btn{
+display:inline-block;
+margin-top:20px;
+background:#8b5a2b;
+color:#faeaae;
+padding:10px 22px;
+border-radius:30px;
+font-size:14px;
+font-weight:700;
+text-decoration:none;
+}
+
+.maps{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:20px;
+}
+
+.map-card{
+flex:1;
+background:#f7f1df;
+border:2px solid #7f4401;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+color:#6b4c00;
+font-weight:700;
+font-size:12px;
+}
+
+.gallery{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.gallery a{
+flex:1;
+background:#fff;
+border:2px solid #8b5a2b;
+border-radius:12px;
+padding:12px;
+text-decoration:none;
+color:#000;
+font-weight:700;
+font-size:12px;
+}
+
+.instagram{
+margin-top:20px;
+background:#6e2a2a;
+padding:12px;
+border-radius:12px;
+}
+
+.instagram a{
+color:#ffd08a;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+}
+
+.insta-logo{
+width:24px;
+height:24px;
+vertical-align:middle;
+margin-right:8px;
+}
+
+/* HOVER */
+.call-btn:hover,
+.visit-btn:hover,
+.map-card:hover,
+.gallery a:hover{
+transform:scale(1.05);
+transition:0.3s;
+}
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.popup-box{
+background:#fff;
+padding:20px;
+border-radius:15px;
+text-align:center;
+width:80%;
+max-width:300px;
+}
+
+.popup-box h3{
+margin-bottom:15px;
+}
+
+.popup-box button{
+display:block;
+width:100%;
+margin:10px 0;
+padding:10px;
+border:none;
+border-radius:10px;
+font-weight:700;
+cursor:pointer;
+}
+
+.popup-box button:nth-child(2){
+background:#25D366;
+color:#fff;
+}
+
+.popup-box button:nth-child(3){
+background:#1e88e5;
+color:#fff;
+}
+
+.close-btn{
+background:#333 !important;
+color:#fff;
+}
+</style>
+
+<script>
+let phoneNumber = "919333333477";
+
+function openContactPopup(){
+document.getElementById("contactPopup").style.display = "flex";
+}
+
+function closePopup(){
+document.getElementById("contactPopup").style.display = "none";
+}
+
+function openWhatsApp(){
+window.open("https://wa.me/" + phoneNumber, "_blank");
+closePopup();
+}
+
+function openDialer(){
+window.location.href = "tel:+" + phoneNumber;
+closePopup();
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="overlay">
+<div class="container">
+
+<img src="AS-logo.png" class="logo" alt="Logo">
+
+<button class="call-btn" onclick="openContactPopup()">
+📞 CALL US
+</button>
+
+<div class="numbers-box">
+
+<div>
+<h3>PALAKOLLU</h3>
+<a href="#" onclick="openContactPopup()">
++91 9333333477
+</a>
+</div>
+
+<div>
+<h3>SRIKAKULAM</h3>
+<a href="#" onclick="openContactPopup()">
++91 9333333557
+</a>
+</div>
+
+<div>
+<h3>AMALAPURAM</h3>
+<a href="#" onclick="openContactPopup()">
++91 9333334344
+</a>
+</div>
+
+</div>
+
+<a href="#visit" class="visit-btn">VISIT NOW</a>
+
+<div id="visit" class="maps">
+
+<a href="https://share.google/RGpQ5DekoebP8RLpo" target="_blank" class="map-card">
+📍 PALAKOLLU
+</a>
+
+<a href="https://share.google/gVeNWUFyKJ0vINzEY" target="_blank" class="map-card">
+📍 AMALAPURAM
+</a>
+
+</div>
+
+<a href="#" class="call-btn">📸 SAMPLE PHOTOS</a>
+
+<div class="gallery">
+
+<a href="YOUR_BIRTHDAY_GOOGLE_PHOTOS_LINK" target="_blank">
+🎂 Birthday
+</a>
+
+<a href="YOUR_WEDDING_GOOGLE_PHOTOS_LINK" target="_blank">
+💍 Wedding
+</a>
+
+<a href="YOUR_SWEETS_GOOGLE_PHOTOS_LINK" target="_blank">
+🍬 Sweets
+</a>
+
+</div>
+
+<div class="instagram">
+
+<a href="https://www.instagram.com/anandasaisweets?igsh=YXhrMmhlemU1OWlw" target="_blank">
+
+<img src="instagram-logo.png" class="insta-logo" alt="Instagram">
+
+FOLLOW US ON INSTAGRAM
+
+</a>
+
+</div>
+
+</div>
+</div>
+
+<div id="contactPopup" class="popup">
+  <div class="popup-box">
+
+    <h3>Choose Option</h3>
+
+    <button onclick="openWhatsApp()">💬 Chat on WhatsApp</button>
+
+    <button onclick="openDialer()">📞 Dial Call</button>
+
+    <button class="close-btn" onclick="closePopup()">✖ Close</button>
+
+  </div>
+</div>
+
+</body>
+</html>
